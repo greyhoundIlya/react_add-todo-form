@@ -33,17 +33,17 @@ export const App = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
 
     const newError: { title?: string; user?: string } = {};
 
     if (!title.trim()) {
-      newError.title = 'Title is required';
+      newError.title = 'Please enter a title';
     }
 
     if (!selectedUserId) {
-      newError.user = 'User selection is required';
+      newError.user = 'Please choose a user';
     }
 
     if (Object.keys(newError).length > 0) {
