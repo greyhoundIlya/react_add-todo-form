@@ -19,15 +19,15 @@ export const App = () => {
   const [error, setError] = useState({ title: '', user: '' });
 
   // handlers
-  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value);
+  const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
     if (error.title) {
       setError(prevError => ({ ...prevError, title: '' }));
     }
   };
 
-  const handleUserChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedUserId(e.target.value);
+  const handleUserChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedUserId(event.target.value);
     if (error.user) {
       setError(prevError => ({ ...prevError, user: '' }));
     }
